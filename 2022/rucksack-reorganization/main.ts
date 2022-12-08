@@ -87,8 +87,7 @@ const findSharedItems = (input: number[][]) => {
 	forEachChunk(3, input, (group) => {
 		const badge = findSharedNumInSortedArrays(group);
 		if (!badge) {
-			console.log("GROUP", group)
-			throw "WHAT!"
+			throw new Error("no badge found")
 		}
 		if (badge) {
 			sum += badge;
